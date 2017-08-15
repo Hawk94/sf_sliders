@@ -3,13 +3,13 @@
 }
 
 .App-logo {
-  height: 80px;
+  height: 40px;
 }
 
 .App-header {
   background: url('./Background-Splash.png');
   background-position: center;
-  height: 130px;
+  height: 50px;
   padding: 20px;
 }
 
