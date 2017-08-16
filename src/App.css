@@ -1,26 +1,51 @@
 .App {
-  text-align: left;
+  text-align: center;
 }
 
 .App-logo {
-  height: 50px;
+  margin-left: 200px;
+  height: 40px;
+}
+
+.social {
+  padding-left: 15px;
+}
+
+.social-image {
+  height: 20px;
+}
+
+.social-links {
+  text-align: right;
+  margin-top: -25px;
+  margin-right: 350px;
 }
 
 .App-header {
+  text-align: left;
   background: url('./Assets/images/Background-Splash.png');
   background-position: center;
   position: relative;
-  height: 760px;
-  padding: 20px;
+  height: 550px;
+  padding: 50px;
 }
 
-.content {
+.content-heading {
   padding: 30px;
   text-align: center;
   letter-spacing: 3px;
   font-size: 2em;
   font-family: 'Raleway-Light';
   color: #79c5e5;
+}
+
+.content {
+  text-align: center;
+  letter-spacing: .1px;
+  font-size: 28px;
+  line-height: 35px;
+  font-family: 'Raleway-Light';
+  color: #fff;
 }
 
 nav {
@@ -35,8 +60,6 @@ nav {
   width: 100%;
 }
 
-
-
 .App-intro {
   padding: 20px;
   background-color: #f6f9fc;
@@ -44,4 +67,72 @@ nav {
   height: 760px;
   font-size: large;
   font-family: 'Lato';
+}
+
+.section-header {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    color: rgb(73, 85, 95);
+    font-family: 'Lato';
+}
+
+.divider {
+  background: url('./Assets/images/Oval.svg');
+  width: 6px;
+  height: 6px;
+  border-radius: 12px;
+  border: 3px solid #7e8fa4;
+  opacity: .20;
+  margin-left: 48.8%;
+  margin-bottom: 20px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature {
+  width: calc(33% - 20px);
+  background-color: #ffffff;
+  box-sizing: border-box;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px 0 rgba(189, 208, 223, 0.26);
+  margin-right: 20px;
+  margin-top: 20px;
+  font-family: 'Lato-bold';
+}
+
+h4 {
+  color: rgb(73, 85, 95);
+}
+
+p {
+  font-family: 'Lato';
+  color: rgb(73, 85, 95);
+}
+
+.dots {
+  margin-top: 80px;
+  margin-right: 1.2%;
+}
+
+.Masterpiece {
+  height: 90px;
+}
+
+.Gatekeeper {
+  height: 90px;
+}
+
+.Insight {
+  height: 90px;
+}
+
+.DataSearch {
+  height: 90px;
 }
