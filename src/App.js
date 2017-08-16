@@ -18,6 +18,7 @@ class App extends Component {
             <img src={headerCurve} className='curve' alt='' />
           </div>
         <div className='App-intro'>
+        <p> Some Text </p>
         </div>
       </div>
     )
