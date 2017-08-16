@@ -3,16 +3,35 @@
 }
 
 .App-logo {
-  height: 40px;
+  height: 50px;
 }
 
 .App-header {
   background: url('./Background-Splash.png');
   background-position: center;
-  height: 50px;
+  position: relative;
+  height: 760px;
   padding: 20px;
 }
 
+nav {
+  margin: 0 auto;
+  width: 1500px;
+}
+
+.curve {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
 .App-intro {
+  padding: 20px;
+  background-color: #f6f9fc;
+  background-position: center;
+  height: 760px;
   font-size: large;
 }
