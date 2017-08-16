@@ -7,11 +7,20 @@
 }
 
 .App-header {
-  background: url('./Background-Splash.png');
+  background: url('./Assets/images/Background-Splash.png');
   background-position: center;
   position: relative;
   height: 760px;
   padding: 20px;
+}
+
+.content {
+  padding: 30px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 2em;
+  font-family: 'Raleway-Light';
+  color: #79c5e5;
 }
 
 nav {
