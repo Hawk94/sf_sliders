@@ -1,0 +1,16 @@
+.slider {
+    max-width: 500px;
+    height: 50px;
+    border: 0px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+h3 {
+    margin: auto;
+    max-width: 500px;
+    text-align: left;
+    font-family: 'Lato-bold';
+    color: rgb(73, 85, 95);
+}
