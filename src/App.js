@@ -82,9 +82,9 @@ class App extends Component {
 
         <div className='App-body'>
           <section class='how-does-it-work'>
-            <div class='curve'><img src={whiteCurve} alt='' /></div>
-            <div class='container'>
-              <h2 class='section-header'>Enrichment Savings</h2>
+            <div className='curve'><img src={whiteCurve} alt='' /></div>
+            <div className='container'>
+              <h2 className='section-header'>Enrichment Savings</h2>
               <CostCalculator />
             </div>
           </section>

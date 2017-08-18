@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Slider from 'rc-slider';
 
-import 'rc-tooltip/assets/bootstrap.css';
-import 'rc-slider/assets/index.css';
 import './index.css'
 
 
@@ -14,16 +12,26 @@ export default class CostCalculator extends Component {
   state = {
     sites: 28,
     avgValue: 30000,
-    dataQuality: 1
+    dataQuality: 1,
   };
 
   calculateCost(value, key) {
-    const { sites, avgValue, dataQuality } = this.state;
-    return 0
-  }
+    this.state[key] = value
+    const { sites, avgValue, dataQuality, result } = this.state;
+    const DUPLICATION = 0.2 - (dataQuality*0.02)
 
-  getHandle() {
+    const AVOIDANCE = 0.15
+    const INVENTORY_TO_BE_SOLD = 0.1
 
+    const totalInventoryValue = sites * avgValue
+    const inventoryRationalisation = totalInventoryValue * DUPLICATION
+    const purchaseAvoidance = totalInventoryValue * AVOIDANCE
+    const saleOfObsoleteItems = totalInventoryValue * INVENTORY_TO_BE_SOLD
+
+    const totalSavings = saleOfObsoleteItems + purchaseAvoidance + inventoryRationalisation
+
+    this.state.result = totalSavings
+    this.forceUpdate()
   }
 
   render() {
@@ -31,7 +39,6 @@ export default class CostCalculator extends Component {
 
 
     const createSliderWithTooltip = Slider.createSliderWithTooltip;
-    const Range = createSliderWithTooltip(Slider.Range);
     const Handle = Slider.Handle;
 
     const handle = (props) => {
@@ -68,7 +75,7 @@ export default class CostCalculator extends Component {
           />
         </div>
 
-        <div className="calculator">
+        <div className="calculator-slider">
           <h3 className='sliderLabel'>
             Avg. Inventory Value
           </h3>
@@ -85,7 +92,7 @@ export default class CostCalculator extends Component {
           />
         </div>
 
-        <div className="calculator">
+        <div className="calculator-slider">
           <h3 className='sliderLabel'>
             Data Quality
           </h3>
@@ -102,7 +109,7 @@ export default class CostCalculator extends Component {
         </div>
 
         <div className='summary'>
-        <span>Result goes here!</span>
+        <span>Saving: {this.state.result}</span>
         </div>
 
       </div>
