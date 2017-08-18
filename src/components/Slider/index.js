@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from 'rc-slider';
+import NumericInput from 'react-numeric-input';
 
 import './index.css'
 
