@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import Slider from 'rc-slider';
-import NumericInput from 'react-numeric-input';
 
 import './index.css'
 
-
-import ReactDOM from 'react-dom';
 import Tooltip from 'rc-tooltip';
 
 
@@ -17,8 +14,7 @@ export default class CostCalculator extends Component {
   };
 
   calculateCost(value, key) {
-    this.state[key] = value
-    const { sites, avgValue, dataQuality, result } = this.state;
+    const { sites, avgValue, dataQuality } = this.state;
     const DUPLICATION = 0.2 - (dataQuality*0.02)
 
     const AVOIDANCE = 0.15
@@ -31,15 +27,12 @@ export default class CostCalculator extends Component {
 
     const totalSavings = saleOfObsoleteItems + purchaseAvoidance + inventoryRationalisation
 
-    this.state.result = totalSavings
-    this.forceUpdate()
+    this.setState({[key]: value,
+                   'result': totalSavings})
   }
 
   render() {
     const { sites, avgValue, dataQuality } = this.state;
-
-
-    const createSliderWithTooltip = Slider.createSliderWithTooltip;
     const Handle = Slider.Handle;
 
     const handle = (props) => {
@@ -59,60 +52,71 @@ export default class CostCalculator extends Component {
 
 
     return (
-      <div className="calculator">
-        <div className="calculator-slider">
-          <h3 className='sliderLabel'>
-            Sites
-          </h3>
-          <Slider
-            className="slider"
-            handle={handle}
-            max={100}
-            min={0}
-            defaultValue={sites}
-            onChange={value => {
-              this.calculateCost(value, 'sites');
-            }}
-          />
-        </div>
+      <div>
+        <div className="calculator">
+          <div className="calculator-slider">
+            <h3 className='sliderLabel'>
+              Sites
+            </h3>
+            <Slider
+              className="slider"
+              handle={handle}
+              max={100}
+              min={0}
+              defaultValue={sites}
+              onChange={value => {
+                this.calculateCost(value, 'sites');
+              }}
+            />
+            <input type="number" className="number" value={this.state.sites} />
+          </div>
 
-        <div className="calculator-slider">
-          <h3 className='sliderLabel'>
-            Avg. Inventory Value
-          </h3>
-          <Slider
-            className="slider"
-            handle={handle}
-            defaultValue={avgValue}
-            step={10000}
-            max={100000}
-            min={0}
-            onChange={value => {
-              this.calculateCost(value, 'avgValue');
-            }}
-          />
-        </div>
+          <div className="calculator-slider">
+            <h3 className='sliderLabel'>
+              Avg. Inventory Value
+            </h3>
+            <Slider
+              className="slider"
+              handle={handle}
+              defaultValue={avgValue}
+              step={1000}
+              max={100000}
+              min={0}
+              onChange={value => {
+                this.calculateCost(value, 'avgValue');
+              }}
+            />
+            <input type="number" className="number" value={this.state.avgValue} />
+          </div>
 
-        <div className="calculator-slider">
-          <h3 className='sliderLabel'>
-            Data Quality
-          </h3>
-          <Slider
-            className="slider"
-            handle={handle}
-            defaultValue={dataQuality}
-            max={10}
-            min={0}
-            onChange={value => {
-              this.calculateCost(value, "dataQuality");
-            }}
-          />
+          <div className="calculator-slider">
+            <h3 className='sliderLabel'>
+              Data Quality
+            </h3>
+              <div className='inside'>
+                <Slider
+                  className="slider"
+                  handle={handle}
+                  defaultValue={dataQuality}
+                  max={10}
+                  min={0}
+                  onChange={value => {
+                    this.calculateCost(value, "dataQuality");
+                  }}
+                />
+                <input type="number" className="number" value={this.state.dataQuality}/>
+              </div>
+          </div>
         </div>
-
+        
+        <div className='saving'>
+          <span>By using sparesFinder's tools to manage your supply chain you could save: </span>
+        </div>
+      
         <div className='summary'>
-        <span>Saving: {this.state.result}</span>
+          <span>Total Saving:</span>
+          <p>{this.state.result}</p>
         </div>
-
       </div>
     );
   }

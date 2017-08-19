@@ -28,6 +28,7 @@
   position: relative;
   height: 550px;
   padding: 50px;
+  width: 100%;
 }
 
 .content-heading {
@@ -60,6 +61,12 @@ nav {
   width: 100%;
 }
 
+.whiteCurve {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
 .App-intro {
   padding: 20px;
   background-color: #f6f9fc;
@@ -70,10 +77,14 @@ nav {
 }
 
 .section-header {
-    margin-top: 100px;
+    margin-top: 20px;
     margin-bottom: 50px;
     color: rgb(73, 85, 95);
     font-family: 'Lato';
+}
+
+.section-body {
+  font-size: 1em;
 }
 
 .divider {
@@ -100,8 +111,8 @@ nav {
   height: 250px;
   text-align: center;
   border-radius: 10px;
-  box-shadow: 0 4px 18px 0 rgba(189, 208, 223, 0.26);
-  margin-right: 20px;
+  box-shadow: 0 4px 18px 0 rgba(189, 208, 223, 0.9);
+  margin-right: 25px;
   margin-top: 20px;
   font-family: 'Lato-bold';
 }
@@ -121,7 +132,7 @@ p {
 }
 
 .dots {
-  margin-top: 80px;
+  margin-top: 90px;
   margin-right: 0%;
 }
 

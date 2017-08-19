@@ -12,10 +12,19 @@ import Insight from './Assets/images/Insight.png';
 import Gatekeeper from './Assets/images/Gatekeeper.png';
 import Masterpiece from './Assets/images/Masterpiece.png';
 import dots from './Assets/images/colour-dots.svg';
+import {WOW} from 'wowjs/dist/wow';
 
 import './App.css'
 
+
+
+
 class App extends Component {
+
+  componentDidMount() {
+    new WOW().init();
+  }
+
   render() {
     return (
       <div className='App'>
@@ -39,7 +48,21 @@ class App extends Component {
             <img src={headerCurve} className='curve' alt='' />
           </div>
 
-        <div className='App-intro'>
+        <div class="wow fadeInUp" data-wow-duration="2s">
+          <div className='App-intro'>
+            <section class='how-does-it-work'>
+              <div className='container'>
+                <h2 className='section-header'>Savings Calculator</h2>
+                <p className='section-body'>Find out how much you could save by using sparesFinder</p>
+                <CostCalculator />
+              </div>
+              <img src={dots} alt='' className='dots' />
+            </section>
+          </div>
+        </div>
+
+        <div className='App-body'>
+          <div className='whiteCurve'><img src={whiteCurve} alt='' /></div>
           <section className='product'>
             <div className='container'>
               <h2 className='section-header'>sparesFinder offers a range of cloud-based software solutions<br /> designed to build and maintain accurate, accessible,<br /> and reliable spare parts data.</h2>
@@ -51,41 +74,30 @@ class App extends Component {
                     <img src={Masterpiece} className='Masterpiece' alt='' />
                   </figure>
                   <h4>MASTERPIECE</h4>
-                  <p>Standardise and enrich material master data</p>
+                  <span>Standardise and enrich material master data</span>
                 </div>
                 <div className='feature'>
                   <figure>
                     <img src={Insight} className='Insight' alt='' />
                   </figure>
                   <h4>INSIGHT</h4>
-                  <p>Aggregate & analyse MRO spend, stock and usage</p>
+                  <span>Aggregate & analyse MRO spend, stock and usage</span>
                 </div>
                 <div className='feature' >
                   <figure>
                     <img src={Gatekeeper} className='Gatekeeper' alt='' />
                   </figure>
                   <h4>GATEKEEPER</h4>
-                  <p>Govern material master data</p>
+                  <span>Govern material master data</span>
                 </div>
                 <div className='feature' >
                   <figure>
                     <img src={DataSearch} className='DataSearch' alt='' />
                   </figure>
                   <h4>FINDER</h4>
-                  <p>Find & leverage material master data</p>
+                  <span>Find & leverage material master data</span>
                 </div>
               </div>
-            </div>
-            <img src={dots} alt='' className='dots' />
-          </section>
-        </div>
-
-        <div className='App-body'>
-          <section class='how-does-it-work'>
-            <div className='curve'><img src={whiteCurve} alt='' /></div>
-            <div className='container'>
-              <h2 className='section-header'>Enrichment Savings</h2>
-              <CostCalculator />
             </div>
           </section>
         </div>
