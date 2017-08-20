@@ -31,7 +31,7 @@ class App extends Component {
 
           <div className='App-header'>
             <nav>
-            <img src={logo} className='App-logo' alt='logo' />
+            <a href='https://sparesfinder.com'><img src={logo} className='App-logo' alt='logo' /></a>
             <p className='social-links'>
               <a href='https://dustapp.slack.com' className='social'><img src={slack} className='social-image' alt='Slack' /></a>
               <a href='https://twitter.com/dustcrypto' className='social'><img src={twitter} className='social-image' alt='Twitter' /></a>
@@ -48,7 +48,6 @@ class App extends Component {
             <img src={headerCurve} className='curve' alt='' />
           </div>
 
-        <div class="wow fadeInUp" data-wow-duration="2s">
           <div className='App-intro'>
             <section class='how-does-it-work'>
               <div className='container'>
@@ -59,10 +58,10 @@ class App extends Component {
               <img src={dots} alt='' className='dots' />
             </section>
           </div>
-        </div>
+
 
         <div className='App-body'>
-          <div className='whiteCurve'><img src={whiteCurve} alt='' /></div>
+          <img src={whiteCurve} className='whiteCurve' alt='' />
           <section className='product'>
             <div className='container'>
               <h2 className='section-header'>sparesFinder offers a range of cloud-based software solutions<br /> designed to build and maintain accurate, accessible,<br /> and reliable spare parts data.</h2>
@@ -71,31 +70,31 @@ class App extends Component {
               <div className='features'>
                 <div className='feature'>
                   <figure>
-                    <img src={Masterpiece} className='Masterpiece' alt='' />
+                    <a href='https://sparesfinder.com'><img src={Masterpiece} className='Masterpiece' alt='' /></a>
                   </figure>
                   <h4>MASTERPIECE</h4>
-                  <span>Standardise and enrich material master data</span>
+                  <span>Standardise & enrich</span>
                 </div>
                 <div className='feature'>
                   <figure>
-                    <img src={Insight} className='Insight' alt='' />
+                    <a href='https://sparesfinder.com'><img src={Insight} className='Insight' alt='' /></a>
                   </figure>
                   <h4>INSIGHT</h4>
-                  <span>Aggregate & analyse MRO spend, stock and usage</span>
+                  <span>Aggregate & analyse</span>
                 </div>
                 <div className='feature' >
                   <figure>
-                    <img src={Gatekeeper} className='Gatekeeper' alt='' />
+                    <a href='https://sparesfinder.com'><img src={Gatekeeper} className='Gatekeeper' alt='' /></a>
                   </figure>
                   <h4>GATEKEEPER</h4>
-                  <span>Govern material master data</span>
+                  <span>Govern & protect</span>
                 </div>
                 <div className='feature' >
                   <figure>
-                    <img src={DataSearch} className='DataSearch' alt='' />
+                    <a href='https://sparesfinder.com'><img src={DataSearch} className='DataSearch' alt='' /></a>
                   </figure>
                   <h4>FINDER</h4>
-                  <span>Find & leverage material master data</span>
+                  <span>Interrogate & leverage</span>
                 </div>
               </div>
             </div>

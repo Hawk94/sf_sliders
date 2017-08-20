@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import Slider from 'rc-slider';
-
-import './index.css'
-
+import accounting from 'accounting'
 import Tooltip from 'rc-tooltip';
+import './index.css'
 
 
 export default class CostCalculator extends Component {
@@ -115,7 +114,7 @@ export default class CostCalculator extends Component {
       
         <div className='summary'>
           <span>Total Saving:</span>
-          <p>{this.state.result}</p>
+          <h4>{accounting.formatMoney(this.state.result)}</h4>
         </div>
       </div>
     );

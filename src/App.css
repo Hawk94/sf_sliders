@@ -5,6 +5,7 @@
 .App-logo {
   margin-left: 200px;
   height: 40px;
+  opacity: 0.99;
 }
 
 .social {
@@ -17,8 +18,8 @@
 
 .social-links {
   text-align: right;
-  margin-top: -25px;
-  margin-right: 350px;
+  margin-top: -40px;
+  margin-right: 270px;
 }
 
 .App-header {
@@ -26,9 +27,15 @@
   background: url('./Assets/images/Background-Splash.png');
   background-position: center;
   position: relative;
-  height: 550px;
-  padding: 50px;
+  min-height: 700px;
+  height: 100vh;
+  padding-top: 50px;
   width: 100%;
+
+  @media (max-width: $break-small) {
+    min-height: 280px;
+  }
+
 }
 
 .content-heading {
@@ -51,67 +58,129 @@
 
 nav {
   margin: 0 auto;
-  width: 1500px;
+}
+
+a {
+  opacity: 0.65
+}
+a:active;
+a:visited {
+  font-weight: 500;
+  font-family: $font-family-header;
+  color: #ffffff;
+  opacity: 0.3;
+  transition: opacity 250ms ease;
+  display: block;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+a.social {
+  @media (max-width: $break-small) {
+    display: none;
+  }
+
+  font-size: 0px;
+  line-height: 1;
+  padding: 5px;
+
+  img {
+    height: 18px;
+    width: auto;
+  }
+
+  &:last-child {
+    padding-right: 0px;
+  }
 }
 
 .curve {
+  user-select: none;
+  pointer-events: none;
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  margin-left: -5px;
+  bottom: -1px;
+  width: 101%;
+  z-index: 99;
+  
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: $break-small) {
+    bottom: -2px;
+  }
 }
 
 .whiteCurve {
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  user-select: none;
+  pointer-events: none;
+  margin-left: -5px;
+  bottom: -1px;
+  margin-top:-1px;
+  width: 101%;
+  z-index: 99;
+  
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: $break-small) {
+    bottom: -2px;
+  }
 }
 
 .App-intro {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: #f6f9fc;
   background-position: center;
   height: 760px;
+  width: 100%;
   font-size: large;
-  font-family: 'Lato';
+  font-family: 'Raleway-Light';
+}
+
+.dots {
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.App-body {
+  width: 100%;
+  background: url('./Assets/images/Background-Splash.png');
 }
 
 .section-header {
     margin-top: 20px;
     margin-bottom: 50px;
     color: rgb(73, 85, 95);
-    font-family: 'Lato';
+    font-family: 'Raleway-Light';
 }
 
 .section-body {
+  font-family: 'Raleway-Light';
   font-size: 1em;
-}
-
-.divider {
-  background: url('./Assets/images/Oval.svg');
-  width: 6px;
-  height: 6px;
-  border-radius: 12px;
-  border: 3px solid #7e8fa4;
-  opacity: .20;
-  margin-left: 50%;
-  margin-bottom: 20px;
 }
 
 .features {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 100px;
 }
 
 .feature {
   background-color: #ffffff;
   box-sizing: border-box;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 18px 0 rgba(189, 208, 223, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 18px 0 rgba(189, 208, 223, 0.3);
   margin-right: 25px;
   margin-top: 20px;
   font-family: 'Lato-bold';
@@ -124,16 +193,12 @@ h2 {
 
 h4 {
   color: rgb(73, 85, 95);
+  margin-bottom: 5px
 }
 
 p {
   font-family: 'Lato';
   color: rgb(73, 85, 95);
-}
-
-.dots {
-  margin-top: 90px;
-  margin-right: 0%;
 }
 
 .Masterpiece {

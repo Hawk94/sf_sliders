@@ -67,12 +67,13 @@ h3 {
 
 p {
   font-size: 1.6em;
+  font-family: 'Raleway-Light';
 }
 
 span {
   max-width: 750px;
   text-align: left;
-  font-family: 'Lato';
+  font-family: 'Raleway-Light';
   color: rgb(73, 85, 95);
   margin-bottom: auto;
 }
