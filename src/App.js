@@ -33,9 +33,9 @@ class App extends Component {
             <nav>
             <a href='https://sparesfinder.com'><img src={logo} className='App-logo' alt='logo' /></a>
             <p className='social-links'>
-              <a href='https://dustapp.slack.com' className='social'><img src={slack} className='social-image' alt='Slack' /></a>
-              <a href='https://twitter.com/dustcrypto' className='social'><img src={twitter} className='social-image' alt='Twitter' /></a>
-              <a href='https://www.facebook.com/Dust-108192633212782/' className='social'><img src={facebook} className='social-image' alt='Facebook' /></a>
+              <a href='https://sparesfinder.slack.com' className='social'><img src={slack} className='social-image' alt='Slack' /></a>
+              <a href='https://twitter.com/sparesfinder' className='social'><img src={twitter} className='social-image' alt='Twitter' /></a>
+              <a href='https://www.facebook.com' className='social'><img src={facebook} className='social-image' alt='Facebook' /></a>
               <a href='https://t.me/joinchat/Ajb2Y0RyndwDiEAO4V-4qQ' className='social'><img src={telegram} className='social-image' alt='Slack' /></a>
             </p>
 
@@ -55,7 +55,6 @@ class App extends Component {
                 <p className='section-body'>Find out how much you could save by using sparesFinder</p>
                 <CostCalculator />
               </div>
-              <img src={dots} alt='' className='dots' />
             </section>
           </div>
 
@@ -64,36 +63,36 @@ class App extends Component {
           <img src={whiteCurve} className='whiteCurve' alt='' />
           <section className='product'>
             <div className='container'>
-              <h2 className='section-header'>sparesFinder offers a range of cloud-based software solutions<br /> designed to build and maintain accurate, accessible,<br /> and reliable spare parts data.</h2>
+              <p className='content'>sparesFinder offers a range of cloud-based software solutions<br /> designed to build and maintain accurate, accessible,<br /> and reliable spare parts data.</p>
               <div className='divider'></div>
 
               <div className='features'>
                 <div className='feature'>
                   <figure>
-                    <a href='https://sparesfinder.com'><img src={Masterpiece} className='Masterpiece' alt='' /></a>
+                    <a href='https://www.sparesfinder.com/enrich-clean-material-master-data'><img src={Masterpiece} className='Masterpiece' alt='' /></a>
                   </figure>
-                  <h4>MASTERPIECE</h4>
+                  <h5>MASTERPIECE</h5>
                   <span>Standardise & enrich</span>
                 </div>
                 <div className='feature'>
                   <figure>
-                    <a href='https://sparesfinder.com'><img src={Insight} className='Insight' alt='' /></a>
+                    <a href='https://www.sparesfinder.com/mro-supply-chain-data/'><img src={Insight} className='Insight' alt='' /></a>
                   </figure>
-                  <h4>INSIGHT</h4>
+                  <h5>INSIGHT</h5>
                   <span>Aggregate & analyse</span>
                 </div>
                 <div className='feature' >
                   <figure>
-                    <a href='https://sparesfinder.com'><img src={Gatekeeper} className='Gatekeeper' alt='' /></a>
+                    <a href='https://www.sparesfinder.com/gatekeeper-material-master-data/'><img src={Gatekeeper} className='Gatekeeper' alt='' /></a>
                   </figure>
-                  <h4>GATEKEEPER</h4>
+                  <h5>GATEKEEPER</h5>
                   <span>Govern & protect</span>
                 </div>
                 <div className='feature' >
                   <figure>
-                    <a href='https://sparesfinder.com'><img src={DataSearch} className='DataSearch' alt='' /></a>
+                    <a href='https://www.sparesfinder.com/find-material-master-data/'><img src={DataSearch} className='DataSearch' alt='' /></a>
                   </figure>
-                  <h4>FINDER</h4>
+                  <h5>FINDER</h5>
                   <span>Interrogate & leverage</span>
                 </div>
               </div>

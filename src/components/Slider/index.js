@@ -14,10 +14,10 @@ export default class CostCalculator extends Component {
 
   calculateCost(value, key) {
     const { sites, avgValue, dataQuality } = this.state;
-    const DUPLICATION = 0.2 - (dataQuality*0.02)
+    const DUPLICATION = 0.4 - (dataQuality*0.02)
 
-    const AVOIDANCE = 0.15
-    const INVENTORY_TO_BE_SOLD = 0.1
+    const AVOIDANCE = 0.4
+    const INVENTORY_TO_BE_SOLD = sites/5
 
     const totalInventoryValue = sites * avgValue
     const inventoryRationalisation = totalInventoryValue * DUPLICATION
@@ -107,11 +107,11 @@ export default class CostCalculator extends Component {
               </div>
           </div>
         </div>
-        
+
         <div className='saving'>
           <span>By using sparesFinder's tools to manage your supply chain you could save: </span>
         </div>
-      
+
         <div className='summary'>
           <span>Total Saving:</span>
           <h4>{accounting.formatMoney(this.state.result)}</h4>

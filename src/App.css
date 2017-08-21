@@ -26,6 +26,7 @@
   text-align: left;
   background: url('./Assets/images/Background-Splash.png');
   background-position: center;
+  background-attachment: fixed;
   position: relative;
   min-height: 700px;
   height: 100vh;
@@ -41,6 +42,7 @@
 .content-heading {
   padding: 30px;
   text-align: center;
+  padding-top: 200px;
   letter-spacing: 3px;
   font-size: 2em;
   font-family: 'Raleway-Light';
@@ -104,7 +106,7 @@ a.social {
   bottom: -1px;
   width: 101%;
   z-index: 99;
-  
+
   img {
     width: 100%;
   }
@@ -122,7 +124,7 @@ a.social {
   margin-top:-1px;
   width: 101%;
   z-index: 99;
-  
+
   img {
     width: 100%;
   }
@@ -137,21 +139,18 @@ a.social {
   padding-bottom: 20px;
   background-color: #f6f9fc;
   background-position: center;
+  opacity: 50%;
   height: 760px;
   width: 100%;
   font-size: large;
   font-family: 'Raleway-Light';
 }
 
-.dots {
-  margin-top: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
 .App-body {
   width: 100%;
   background: url('./Assets/images/Background-Splash.png');
+  background-attachment: fixed;
 }
 
 .section-header {
@@ -188,12 +187,14 @@ a.social {
 
 h2 {
   font-family: 'Lato-bold';
+  font-size: 50px;
   color: rgb(73, 85, 95);
 }
 
 h4 {
   color: rgb(73, 85, 95);
-  margin-bottom: 5px
+  margin: 10px;
+  font-size: 40px;
 }
 
 p {
